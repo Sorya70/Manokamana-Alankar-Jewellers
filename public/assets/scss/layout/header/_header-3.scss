@@ -127,6 +127,17 @@
         }
     }
 }
+/* Logo name style */
+.logo-name {
+  font-size: 16px;        /* same as menu links */
+  font-weight: 500;       /* match menu font weight */
+  color: white;           /* default color for white background */
+}
+
+/* When header is sticky (dark background) */
+.tp-header-sticky.header-sticky .logo-name {
+  color: var(--tp-common-black);
+}
 
 .tp-menu-line{
     position: absolute;

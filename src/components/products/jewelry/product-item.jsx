@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
-import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -25,17 +24,14 @@ const ProductItem = ({ product }) => {
   const isAddedToWishlist = wishlist.some((prd) => prd._id === _id);
   const dispatch = useDispatch();
 
-  // handle add product
   const handleAddProduct = (prd) => {
     dispatch(add_cart_product(prd));
   };
 
-  // handle wishlist product
   const handleWishlistProduct = (prd) => {
     dispatch(add_to_wishlist(prd));
   };
 
-  // Example slider images (replace with product.images if available)
   const productImages = [slider_img_1, slider_img_2, slider_img_3, slider_img_4];
 
   return (
@@ -44,9 +40,13 @@ const ProductItem = ({ product }) => {
         <Swiper spaceBetween={10} slidesPerView={1} loop>
           {productImages.map((img, index) => (
             <SwiperSlide key={index}>
-              <Link href={`/product-details/${_id}`}>
-                <Image src={img} alt={`product image ${index + 1}`} width={284} height={352} />
-              </Link>
+              {/* Removed Link to stop redirect */}
+              <Image
+                src={img}
+                alt={`product image ${index + 1}`}
+                width={284}
+                height={352}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -58,7 +58,8 @@ const ProductItem = ({ product }) => {
 
       <div className="tp-product-content-4">
         <h3 className="tp-product-title-4">
-          <Link href={`/product-details/${_id}`}>{title}</Link>
+          {/* Removed Link to stop redirect */}
+          <span>{title}</span>
         </h3>
         <div className="tp-product-info-4">
           <p>{tags[0]}</p>

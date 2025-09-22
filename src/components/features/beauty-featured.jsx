@@ -47,7 +47,7 @@ const BeautyFeatured = () => {
                   </div>
                   <div className="tp-featured-content-3">
                     <h3 className="tp-featured-title-3">
-                      <Link href="/shop">{item.title}</Link>
+                      <Link href="/">{item.title}</Link>
                     </h3>
                     <p>{item.subtitle}</p>
                     <div className="tp-featured-price-3">

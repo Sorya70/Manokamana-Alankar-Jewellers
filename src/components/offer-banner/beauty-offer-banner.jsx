@@ -21,10 +21,10 @@ const BeautyOfferBanner = () => {
                     <div className="tp-collection-content">
                         <span>Cosmetics Collection</span>
                         <h3 className="tp-collection-title">
-                          <Link href="/shop">Foundation and <br/> powder brush</Link>
+                          <Link href="/">Foundation and <br/> powder brush</Link>
                         </h3>
                         <div className="tp-collection-btn">
-                          <Link href="/shop" className="tp-btn">
+                          <Link href="/" className="tp-btn">
                               Discover Now 
                               {" "}<ArrowRightSmTwo/>
                           </Link>
@@ -37,10 +37,10 @@ const BeautyOfferBanner = () => {
                     <div className="tp-collection-thumb has-overlay include-bg transition-3" style={{backgroundImage:`url(${collection_thumb_2.src})`}} ></div>
                     <div className="tp-collection-content-1">
                         <h3 className="tp-collection-title-1">
-                          <Link href="/shop">Tops <br/> Blouse Shirts</Link>
+                          <Link href="/">Tops <br/> Blouse Shirts</Link>
                         </h3>
                         <div className="tp-collection-btn-1">
-                          <Link href="/shop" className="tp-link-btn-line">Shop Collection</Link>
+                          <Link href="/" className="tp-link-btn-line">Shop Collection</Link>
                         </div>
                     </div>
                   </div>

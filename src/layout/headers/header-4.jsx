@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { CartTwo, Menu, Search, Wishlist } from '@/svg';
 import Menus from './header-com/menus';
 import logo_white from '@assets/img/logo/logos.png';
-import logo_dark from '@assets/img/logo/logos.png';
+import logo_dark from '@assets/img/logo/logo-color.png';
 import useSticky from '@/hooks/use-sticky';
 import SearchBar from './header-com/search-bar';
 import OffCanvas from '@/components/common/off-canvas';
@@ -21,21 +21,42 @@ const HeaderFour = () => {
   const { quantity } = useCartInfo();
   const { sticky } = useSticky();
   const dispatch = useDispatch();
+
   return (
     <>
       <header>
-        <div id="header-sticky" className={`tp-header-area tp-header-style-transparent-white tp-header-sticky tp-header-transparent has-dark-logo tp-header-height ${sticky ? 'header-sticky' : ''}`}>
+        <div
+          id="header-sticky"
+          className={`tp-header-area tp-header-style-transparent-white tp-header-sticky tp-header-transparent has-dark-logo tp-header-height ${sticky ? 'header-sticky' : ''
+            }`}
+        >
           <div className="tp-header-bottom-3 pl-85 pr-85">
             <div className="container-fluid">
               <div className="row align-items-center">
                 <div className="col-xl-2 col-lg-2 col-6">
-                  <div className="logo">
-                    <Link href="/">
-                      <Image className="logo-light" src={logo_white} alt="logo" width={60} />
-                      <Image className="logo-dark" src={logo_dark} alt="logo"width={60} />
+                  <div className="logo d-flex align-items-center">
+                    <Link href="/" className="d-flex align-items-center">
+                      <Image
+                        className="logo-light"
+                        src={logo_white}
+                        alt="logo"
+                        width={60}
+                      />
+                      <Image
+                        className="logo-dark"
+                        src={logo_dark}
+                        alt="logo"
+                        width={60}
+                      />
+                      {/* Conditional text color */}
+                      <span className={`ml-2 logo-name ${sticky ? "text-dark" : "text-white"}`}>
+                        Manokamana
+                      </span>
                     </Link>
                   </div>
+
                 </div>
+
                 <div className="col-xl-8 col-lg-8 d-none d-lg-block">
                   <div className="main-menu menu-style-3 menu-style-4 p-relative">
                     <nav className="tp-main-menu-content">
@@ -43,28 +64,25 @@ const HeaderFour = () => {
                     </nav>
                   </div>
                 </div>
+
                 <div className="col-xl-2 col-lg-2 col-6">
                   <div className="tp-header-action d-flex align-items-center justify-content-end ml-50">
-
                     <div className="tp-header-action-item d-none d-sm-block">
-                      <button onClick={() => setIsSearchOpen(true)} type="button" className="tp-header-action-btn tp-search-open-btn">
+                      <button
+                        onClick={() => setIsSearchOpen(true)}
+                        type="button"
+                        className="tp-header-action-btn tp-search-open-btn"
+                      >
                         <Search />
                       </button>
                     </div>
-                    {/* <div className="tp-header-action-item d-none d-sm-block">
-                      <Link href="/wishlist" className="tp-header-action-btn">
-                        <Wishlist />
-                        <span className="tp-header-action-badge">{wishlist.length}</span>
-                      </Link>
-                    </div>
-                    <div className="tp-header-action-item d-none d-sm-block">
-                      <button onClick={() => dispatch(openCartMini())} type="button" className="tp-header-action-btn cartmini-open-btn">
-                        <CartTwo />
-                        <span className="tp-header-action-badge">{quantity}</span>
-                      </button>
-                    </div> */}
+
                     <div className="tp-header-action-item d-lg-none">
-                      <button onClick={() => setIsCanvasOpen(true)} type="button" className="tp-offcanvas-open-btn">
+                      <button
+                        onClick={() => setIsCanvasOpen(true)}
+                        type="button"
+                        className="tp-offcanvas-open-btn"
+                      >
                         <Menu />
                       </button>
                     </div>
@@ -77,7 +95,10 @@ const HeaderFour = () => {
       </header>
 
       {/* search bar start */}
-      <SearchBar isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
+      <SearchBar
+        isSearchOpen={isSearchOpen}
+        setIsSearchOpen={setIsSearchOpen}
+      />
       {/* search bar end */}
 
       {/* cart mini sidebar start */}
@@ -85,7 +106,11 @@ const HeaderFour = () => {
       {/* cart mini sidebar end */}
 
       {/* off canvas start */}
-      <OffCanvas isOffCanvasOpen={isOffCanvasOpen} setIsCanvasOpen={setIsCanvasOpen} categoryType="jewelry" />
+      <OffCanvas
+        isOffCanvasOpen={isOffCanvasOpen}
+        setIsCanvasOpen={setIsCanvasOpen}
+        categoryType="jewelry"
+      />
       {/* off canvas end */}
     </>
   );
