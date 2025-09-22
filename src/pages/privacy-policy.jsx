@@ -1,6 +1,6 @@
 // pages/privacy-policy.js
 import React from "react";
-import Wrapper from "@/layout/Wrapper"; // common layout
+import Wrapper from "@/layout/wrapper"; // common layout
 import SEO from "@/components/seo";     // SEO meta
 import Footer from "@/layout/footers/footer";
 import HeaderTwo from "@/layout/headers/header-2";

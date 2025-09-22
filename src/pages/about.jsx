@@ -1,6 +1,6 @@
 // pages/about.js
 import React from "react";
-import Wrapper from "@/layout/Wrapper"; // if you use common layout
+import Wrapper from "@/layout/wrapper"; // if you use common layout
 import SEO from "@/components/seo";     // if you have SEO meta
 import JewelryAbout from "@/components/about/jewelry-about";
 import Footer from "@/layout/footers/footer";
