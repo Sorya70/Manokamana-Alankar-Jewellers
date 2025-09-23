@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 // internal
-import logo from '@assets/img/logo/logo.svg';
+import logo from '@assets/img/logo/logo-color.png';
 import pay from '@assets/img/footer/footer-pay.png';
 import social_data from '@/data/social-data';
 import { Email, Location } from '@/svg';
@@ -20,7 +20,7 @@ const Footer = ({ style_2 = false, style_3 = false, primary_style = false }) => 
                   <div className="tp-footer-widget-content">
                     <div className="tp-footer-logo">
                       <Link href="/">
-                        <Image src={logo} alt="logo" />
+                        <Image src={logo} alt="logo" width={60}/>
                       </Link>
                     </div>
                     <p className="tp-footer-desc">Where trust meets tradition, and jewellery becomes heritage.Purity you can trust, beauty you can cherish forever.</p>

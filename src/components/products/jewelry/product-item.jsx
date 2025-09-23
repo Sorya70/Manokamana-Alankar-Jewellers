@@ -32,7 +32,7 @@ const ProductItem = ({ product }) => {
     dispatch(add_to_wishlist(prd));
   };
 
-  const productImages = [slider_img_1, slider_img_2, slider_img_3, slider_img_4];
+  const productImages = [slider_img_1];
 
   return (
     <div className="tp-product-item-4 p-relative mb-40">
@@ -62,7 +62,7 @@ const ProductItem = ({ product }) => {
           <span>{title}</span>
         </h3>
         <div className="tp-product-info-4">
-          <p>{tags[0]}</p>
+          {/* <p>{tags[0]}</p> */}
         </div>
 
         <div className="tp-product-price-inner-4">

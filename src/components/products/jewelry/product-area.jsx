@@ -88,7 +88,7 @@ const ProductArea = () => {
         </div>
       </div>
       <div className="row">
-        {product_items.slice(0, 5).map((prd) => (
+        {product_items.slice(0, 4).map((prd) => (
           <div key={prd._id} className="col-xl-3 col-lg-4 col-sm-6">
             <ProductItem product={prd} />
           </div>

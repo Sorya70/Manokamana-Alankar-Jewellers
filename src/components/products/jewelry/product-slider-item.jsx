@@ -39,64 +39,14 @@ const ProductSliderItem = ({ product }) => {
           backgroundPosition: "0px -80px",
         }}
       ></div>
-      <div className="tp-product-action-3 tp-product-action-4 tp-product-action-blackStyle tp-product-action-brownStyle">
-        {/* <div className="tp-product-action-item-3 d-flex flex-column">
-          {isAddedToCart ? (
-            <Link
-              href="/cart"
-              className={`tp-product-action-btn-3 ${isAddedToCart ? 'active' : ''} tp-product-add-cart-btn`}
-            >
-              <Cart />
-              <span className="tp-product-tooltip">View Cart</span>
-            </Link>
-          ) : (
-            <button
-              type="button"
-              onClick={() => handleAddProduct(product)}
-              className={`tp-product-action-btn-3 ${isAddedToCart ? 'active' : ''} tp-product-add-cart-btn`}
-            >
-              <Cart />
-              <span className="tp-product-tooltip">Add to Cart</span>
-            </button>
-          )}
-          <button
-            type="button"
-            className="tp-product-action-btn-3 tp-product-quick-view-btn"
-            onClick={() => dispatch(handleProductModal(product))}
-          >
-            <QuickView />
-            <span className="tp-product-tooltip">Quick View</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => handleWishlistProduct(product)}
-            className={`tp-product-action-btn-3 ${isAddedToWishlist ? 'active' : ''} tp-product-add-to-wishlist-btn`}
-          >
-            <Wishlist />
-            <span className="tp-product-tooltip">Add To Wishlist</span>
-          </button>
-        </div> */}
-      </div>
-      <div className="tp-category-content-4">
-        <h3 className="tp-category-title-4">
-          <span>{title}</span>
-        </h3>
-
-        <div className="tp-category-price-wrapper-4">
-          {/* <span className="tp-category-price-4">${price.toFixed(2)}</span> */}
-          {/* <div className="tp-category-add-to-cart">
-            {isAddedToCart ? (
-              <Link href="/cart" className="tp-category-add-to-cart-4">
-                <AddCart />{" "}View Cart
-              </Link>
-            ) : (
-              <button onClick={() => handleAddProduct(product)} className="tp-category-add-to-cart-4">
-                <AddCart />{" "}Add to Cart
-              </button>
-            )}
-          </div> */}
+      {/* <div className="tp-category-content-4">
+        <div className="tp-category-price-wrapper-4 mt-0 sm:mt-4">
+          <h3 className="tp-category-title-4">
+            <span>{title}</span>
+          </h3>
         </div>
-      </div>
+      </div> */}
+
     </div>
   );
 };

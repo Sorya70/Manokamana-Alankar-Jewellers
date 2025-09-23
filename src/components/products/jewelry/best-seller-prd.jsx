@@ -57,7 +57,7 @@ const BestSellerPrd = () => {
     content = <ErrorMsg msg="No Products found!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
-    const product_items = products.data.slice(0, 8);
+    const product_items = products.data.slice(0, 4);
     content = (
       <Swiper {...slider_setting} modules={[Scrollbar]} className="tp-best-slider-active swiper-container mb-10">
         {product_items.map(item => (

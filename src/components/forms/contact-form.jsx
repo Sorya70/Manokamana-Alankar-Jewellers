@@ -33,9 +33,9 @@ const ContactForm = () => {
 
       reset();
     };
-
+//onSubmit={handleSubmit(onSubmit)}
   return (
-    <form onSubmit={handleSubmit(onSubmit)} id="contact-form">
+    <form  id="contact-form">
       <div className="tp-contact-input-wrapper">
         <div className="tp-contact-input-box">
           <div className="tp-contact-input">
@@ -82,7 +82,7 @@ const ContactForm = () => {
         </div>
       </div>
       <div className="tp-contact-btn">
-        <button type="submit">Send Message</button>
+        <button>Send Message</button>
       </div>
     </form>
   );
